@@ -14,3 +14,12 @@ SELECT
     SUM(quantite * prix) AS montant_total
 FROM detail_commande
 GROUP BY id_commande;
+
+-- Etape 04
+SELECT
+    co.id_commande,
+    co.date_commande,
+    COALESCE(cl.nom, 'client de passage') AS nom_client
+FROM commande co
+LEFT JOIN client cl
+    ON co.id_client = cl.id_client;
