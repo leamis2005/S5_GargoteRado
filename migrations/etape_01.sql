@@ -2,7 +2,7 @@ CREATE DATABASE gargote;
 \c gargote;
 
 CREATE TABLE plat(
-    id SERIAL PRIMARY KEY,
+    id_plat SERIAL PRIMARY KEY,
     nom VARCHAR(50) NOT NULL,
     prix INTEGER
 );
